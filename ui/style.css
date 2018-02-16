@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: sans-serif;
     background-color: skyblue;
     margin-top: 75px;
@@ -18,5 +18,20 @@ body {
 
 .img-medium {
     height: 200px;
+}*/
+
+body {
+  font-family: sans-serif;
+  font-color: #fff;
+  background-color: #000;
+  margin-top: 75px;
+}
+
+.banner {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
 }
 
