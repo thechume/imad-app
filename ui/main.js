@@ -8,17 +8,19 @@ var interval;
 function moveRight () {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
+    if( marginLeft >= 200) {
     img.onclick = function () {
         interval = setInterval(moveLeft, 20);
-    }
+    }}
 }
 
 function moveLeft () {
     marginLeft = marginLeft - 1;
     img.style.marginLeft = marginLeft - 'px';
+    if( marginLeft <= 100) {
     img.onclick = function () {
         interval = setInterval(moveRight, 20);
-    }
+    }}
 }
 
 img.onclick = function () {
