@@ -2,7 +2,12 @@ console.log('Loaded!');
 
 //move THUG cover
 var img = document.getElementById('THUG');
+var marginLeft=0;
+ function moveRight () {
+        marginLeft = marginLeft + 10;
+        img.style.marginLeft = marginLeft + 'px';
+    }
 img.onclick = function () {
-    var interval = setInterval(moveLeft, 100);
+    var interval = setInterval(moveRight, 100);
     img.style.marginLeft = '100px';
 }
