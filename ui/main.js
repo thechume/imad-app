@@ -6,7 +6,7 @@ var marginLeft=0;
 var flag=0;
 var interval;
 function moveRight () {
-   // marginLeft = marginLeft + 1;
+    marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
     img.onclick = function () {
         interval = setInterval(moveLeft, 20);
@@ -14,7 +14,7 @@ function moveRight () {
 }
 
 function moveLeft () {
-   // marginLeft = marginLeft - 1;
+    marginLeft = marginLeft - 1;
     img.style.marginLeft = marginLeft - 'px';
     img.onclick = function () {
         interval = setInterval(moveRight, 20);
