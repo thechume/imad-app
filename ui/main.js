@@ -3,7 +3,6 @@ console.log('Loaded!');
 //move THUG cover
 var img = document.getElementById('THUG');
 var marginLeft=0;
-var flag=0;
 function moveRight () {
     if ( marginLeft == 150 )
     {
@@ -12,11 +11,20 @@ function moveRight () {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
 }
-img.onclick = function () {
-    var interval = setInterval(moveRight, 50);
-    if ( img.onclick )
+
+function moveLeft () {
+    if ( marginLeft == 1 )
     {
         return;
     }
+    marginLeft = marginLeft - 1;
+    img.style.marginLeft = marginLeft - 'px';
+}
+
+img.onclick = function () {
+    var interval = setInterval(moveRight, 50);
     //img.style.marginLeft = '100px';
+}
+img.onclick = function () {
+    var interval = setInterval(moveLeft, 50);
 }
