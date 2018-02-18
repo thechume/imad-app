@@ -11,8 +11,8 @@ function moveRight () {
 }
 
 function moveLeft () {
-        marginLeft = marginLeft - 1;
-        img.style.marginLeft = marginLeft - 'px';
+    marginLeft = marginLeft - 1;
+    img.style.marginLeft = marginLeft - 'px';
 }
 
 img.onclick = function () {
