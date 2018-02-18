@@ -5,7 +5,7 @@ var img = document.getElementById('THUG');
 var marginLeft=0;
 var flag=0;
 function moveRight () {
-    if ( marginLeft == 400 )
+    if ( marginLeft == 150 )
     {
         return;
     }
