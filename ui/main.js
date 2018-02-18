@@ -6,25 +6,31 @@ var marginLeft=0;
 var flag=0;
 var interval;
 function moveRight () {
-    marginLeft = marginLeft + 1;
-    img.style.marginLeft = marginLeft + 'px';
+    if( marginLeft == 150 ) {
+        flag=1;
+    }
+    else {
+        marginLeft = marginLeft + 1;
+        img.style.marginLeft = marginLeft + 'px';
+    }
 }
 
 function moveLeft () {
-    marginLeft = marginLeft - 1;
-    img.style.marginLeft = marginLeft - 'px';
+    if( marginLeft == 10 ) {
+        flag=1;
+    }
+    else {
+        marginLeft = marginLeft - 1;
+        img.style.marginLeft = marginLeft - 'px';
+    }
 }
 
 img.onclick = function () {
-    if( flag == 1 )
-    {
-        interval = setInterval(moveRight, 20);
-        flag=0;
-    }
-    else
+    if ( flag == 1)
     {
         interval = setInterval(moveLeft, 20);
-        flag=1;
     }
-    img.style.marginLeft = '100px';
+    else {
+        interval = setInterval(moveRight, 20);
+    }
 }
