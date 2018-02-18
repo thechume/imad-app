@@ -8,7 +8,7 @@ var interval;
 function moveRight () {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
-    if( marginLeft >= 200) {
+    if( marginLeft >= 171) {
     img.onclick = function () {
         interval = setInterval(moveLeft, 20);
     }}
@@ -17,7 +17,7 @@ function moveRight () {
 function moveLeft () {
     marginLeft = marginLeft - 1;
     img.style.marginLeft = marginLeft - 'px';
-    if( marginLeft <= 100) {
+    if( marginLeft <= 169) {
     img.onclick = function () {
         interval = setInterval(moveRight, 20);
     }}
