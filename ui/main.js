@@ -6,9 +6,7 @@ var marginLeft=0;
 function moveRight () {
     if ( marginLeft == 150 )
     {
-        img.onclick = function () {
         var interval = setInterval(moveLeft, 50);
-}
     }
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
