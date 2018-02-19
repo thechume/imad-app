@@ -1,10 +1,27 @@
 console.log('Loaded!');
 
+var button = document.getElementById('counter');
+var counter = 0;
+button.onclick = function() {
+    //make a request to the counter endpoint
+    
+    //capture the response and store it in a variable
+    
+    //render the variable in the correct span
+    counter = counter + 1;
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
+}
+
+
+
 //move THUG cover
-var img = document.getElementById('THUG');
+/*var img = document.getElementById('THUG');
+
 var marginLeft=0;
 var flag=0;
 var interval;
+
 function moveRight () {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
@@ -25,6 +42,6 @@ function moveLeft () {
 
 img.onclick = function () {
     interval = setInterval(moveRight, 20);
-}
+}*/
 
 
