@@ -26,11 +26,10 @@ body {
   background-color: #000;
   margin-top: 75px;
   padding-left: 200px;
-}
-
-.center {
   text-align: center;
 }
+
+
 
 .text-big {
     font-size: 300%;
