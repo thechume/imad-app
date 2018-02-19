@@ -17,7 +17,7 @@ button.onclick = function() {
     }
     
     //make the request
-    request.open('GET','https://ssum16cs@imad.hasura.io/counter', true);
+    request.open('GET','https://ssum16cs@imad.hasura-app.io/counter', true);
     request.send(null);
 }
 
