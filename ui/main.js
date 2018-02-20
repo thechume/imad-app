@@ -19,6 +19,8 @@ button.onclick = function() {
     };
     
     //make the request
+     var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
 };
@@ -28,8 +30,7 @@ button.onclick = function() {
 var submit = document.getElementById('submit.btn');
 submit.onclick = function () {
     //make a req to server and send name
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
+   
     //capture list of names and render as list
     var names = ['name1', 'name2', 'name3', 'name4'];
     var list = '';
