@@ -25,6 +25,7 @@ button.onclick = function() {
 
 //submit name
 var nameInput = document.getElementById('name');
+var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit.btn');
 submit.onclick = function () {
@@ -41,7 +42,9 @@ submit.onclick = function () {
     ul.innerHTML = list;
 };
 
-/*var button = document.getElementById('counter');
+/*THIS WORKS TO INCREMENT COUNTER WHEN CLICK
+
+var button = document.getElementById('counter');
  var counter = 0;
  button.onclick = function() {
      //make a request to the counter endpoint
