@@ -1,6 +1,6 @@
 //console.log('Loaded!');
 
-var button = document.getElementById('counter');
+/*var button = document.getElementById('counter');
 button.onclick = function() {
     //make a request object
     var request = new XMLHttpRequest();
@@ -21,7 +21,20 @@ button.onclick = function() {
     //make the request
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
-}
+}*/
+
+var button = document.getElementById('counter');
+ var counter = 0;
+ button.onclick = function() {
+     //make a request to the counter endpoint
+     
+     //capture the response and store it in a variable
+     
+     //render the variable in the correct span
+     counter = counter + 1;
+     var span = document.getElementById('count');
+     span.innerHTML = counter.toString();
+ }
 
 
 
