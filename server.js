@@ -4,8 +4,8 @@ var path = require('path');
 var pool = require('pg').pool;
 
 var config = {
-    user: 'rapr16cs',
-    database: 'rapr16cs',
+    user: 'ssum16cs',
+    database: 'ssum16cs',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
