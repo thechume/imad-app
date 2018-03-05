@@ -48,11 +48,11 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var Pool= new Pool(config);
+var pool= new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select request
     //return a respone with the results
-    Pool.query('SELECT * FROM TEST', function(err, result) {
+    pool.query('SELECT * FROM TEST', function(err, result) {
         if(err)
         {
             res.status(500).send(err.toString());
