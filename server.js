@@ -35,6 +35,23 @@ app.get("/submit-name/", function(req,res) { //URL => /submit-name?name=somehtin
     res.send(JSON.stringify(names));
 });
 
+app.get('/articles/:articleName', function(req,res) {
+    
+    pool.query("SELECT * FROM article WHERE title="+req.params.articleName, function(err,res) {
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            if(res.rows.length===0)
+                res.status(404).send('Article not found');
+            else
+             {   var articleData= result.rows[0]; 
+             res.send = createTemplate(articles[articleName]); }
+        }
+    });
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
