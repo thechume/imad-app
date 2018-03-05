@@ -123,7 +123,7 @@ app.get('/submit-name', function(req, res) {
     res.send(JSON.stringify(names));
 }); 
 
-app.get('/articles/:articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
     //article == article-one
     //articles[articleName] == {} content object for article one
     var articleName = req.params.articleName;
