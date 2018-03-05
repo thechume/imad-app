@@ -14,7 +14,7 @@ app.use(morgan('combined'));
 
 var counter = 0;
 
-var Pool= new Pool(config);
+
 
 app.get('/counter', function(req,res) {
     counter = counter + 1;
@@ -48,6 +48,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var Pool= new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select request
     //return a respone with the results
