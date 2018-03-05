@@ -14,7 +14,60 @@ app.use(morgan('combined'));
 
 var counter = 0;
 
+function createTemplate(data) {
+    var title = data.title;
+    var date = date.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+    var htmlTemplate = `
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" content="width-devide-width, initial-scale=1" />
+            <link href="/ui/style.css"rel="stylesheet" />
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <br />
+                <h3>
+                    ${heading}
+                </h3>
+                <div> 
+                    ${data.toDate}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>
+    `;
+    return htmlTemplate;
+                
+}
 
+var articles = {
+    'article-one': {
+        title: 'Article One : Sumedha',
+        heading: 'Article One',
+        date: 'Mar 5, 2018',
+        content: 
+            `<p> WHAT THE HECK BRO</p>
+            <p> THIS WORKS?? U SEE ME?? </p>`   },
+    'article-two': {
+        title: 'Article Two: Sumedha',
+        heading: 'Article Two',
+        date: 'mar 6, 2018',
+        content:
+        `<p>bro wtf bro</p>`
+    }
+};
 
 app.get('/counter', function(req,res) {
     counter = counter + 1;
