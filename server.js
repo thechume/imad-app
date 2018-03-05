@@ -4,12 +4,12 @@ var path = require('path');
 var pool = require('pg').pool;
 
 var config = {
-    user: 'ssum16cs',
-    database: 'ssum16cs',
+    user: 'rapr16cs',
+    database: 'rapr16cs',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
-};
+}
 
 
 var app = express();
@@ -97,7 +97,7 @@ var pool = new Pool(config);
 app.get('/test-db', function(req,res){
     //make a request\
     //return the resposnse with results
-   pool.query('SELECT * FROM Test', function(err,result){
+   pool.query('SELECT*FROM Test', function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
@@ -127,7 +127,7 @@ app.get('/articles/:articleName', function (req, res) {
     //article == article-one
     //articles[articleName] == {} content object for article one
     var articleName = req.params.articleName;
-    pool.query("SELECT * FROM article WHERE tilte = '"+ req.params.articleName+ "'", function(err,result){
+    pool.query("SELECT*FROM article WHERE tilte = $1 " [req.params.articleName], function(err,result){
         if(err){
            res.status(500).send(err.toString());
        }
@@ -164,10 +164,4 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
-
-
-
-
-
-
 
