@@ -1,6 +1,6 @@
 //console.log('Loaded!');
 
-/*var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 button.onclick = function() {
     //create a request object
     var request = new XMLHttpRequest();
@@ -40,11 +40,11 @@ submit.onclick = function () {
     }
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
-};*/
+};
 
 //THIS WORKS TO INCREMENT COUNTER WHEN CLICK
 
-var button = document.getElementById('counter');
+/*var button = document.getElementById('counter');
  var counter = 0;
  button.onclick = function() {
      //make a request to the counter endpoint
@@ -55,7 +55,7 @@ var button = document.getElementById('counter');
      counter = counter + 1;
      var span = document.getElementById('count');
      span.innerHTML = counter.toString();
- }
+ };*/
 
 
 
