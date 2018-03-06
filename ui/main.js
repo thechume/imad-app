@@ -10,7 +10,7 @@ button.onclick = function() {
         if ( request.readyState === XMLHttpRequest.DONE ) {
             //take some action
             if( request.status === 200 ) {
-                var cntr = request.responseText;
+                var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
             }
@@ -20,16 +20,17 @@ button.onclick = function() {
 
     //make the request
      var nameInput = document.getElementById('name');
-    var namex = nameInput.value;
+    var name = nameInput.value;
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
 };
 
 //submit name
 
-var submit = document.getElementById('submit.btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     //make a req to server and send name
+    var request = new XMLHttpRequest();
     //capture list of names and render as list
     var names = ['name1', 'name2', 'name3', 'name4'];
     var list = '';
