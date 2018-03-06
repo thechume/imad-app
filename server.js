@@ -125,25 +125,25 @@ app.get('/submit-name', function(req, res) {
 
 var pool = new Pool(config);
 
-app.get('/articles/:articleName', function (req, result) {
+app.get('/articles/:articleName', function (req, res) {
     //article == article-one
     //articles[articleName] == {} content object for article one
     var articleName = req.params.articleName;
     pool.query("SELECT*FROM article WHERE title = " [req.params.articleName], function(err,result){
         if(err){
-           result.status(500).send(err.toString());
+           res.status(500).send(err.toString());
        }
        else{
            if(result.rows.length === 0){
-            result.status(404).send('Article not found');
+            res.status(404).send('Article not found');
            }
            else{
                var articleData = result.rows[0];
-               result.send(createTemplate(articleData));
+               res.send(createTemplate(articleData));
            }
        }
     });
-    result.send(createTemplate(articleData));
+    res.send(createTemplate(articleData));
 });
  
 app.get('/ui/style.css', function (req, res) {
