@@ -17,13 +17,13 @@ button.onclick = function() {
         }
         //not done yet
     };
-};*/
+
     //make the request
      var nameInput = document.getElementById('name');
     var namex = nameInput.value;
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
-
+};*/
 
 //submit name
 
