@@ -143,8 +143,7 @@ app.get('/articles/:articleName', function (req, res) {
            }
        }
     });
-    var articleData = result.rows[0];
-    res.send(createTemplate(articleData));
+   // res.send(createTemplate(articleData));
 });
  
 app.get('/ui/style.css', function (req, res) {
