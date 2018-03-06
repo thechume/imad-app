@@ -1,7 +1,7 @@
 //console.log('Loaded!');
 
-var submit = document.getElementById('counter');
-submit.onclick = function() {
+/*var button = document.getElementById('counter');
+button.onclick = function() {
     //create a request object
     var request = new XMLHttpRequest();
     
@@ -17,13 +17,13 @@ submit.onclick = function() {
         }
         //not done yet
     };
-    
+};*/
     //make the request
      var nameInput = document.getElementById('name');
-    var name = nameInput.value;
+    var namex = nameInput.value;
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
-};
+
 
 //submit name
 
