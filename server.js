@@ -123,6 +123,8 @@ app.get('/submit-name', function(req, res) {
     res.send(JSON.stringify(names));
 }); 
 
+var pool = new Pool(config);
+
 app.get('/articles/:articleName', function (req, res) {
     //article == article-one
     //articles[articleName] == {} content object for article one
