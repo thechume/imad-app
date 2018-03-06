@@ -19,7 +19,7 @@ button.onclick = function() {
     };
 
     //make the request
-    /*var nameInput = document.getElementById('name');
+    var nameInput = document.getElementById('name');
     var name = nameInput.value;
     request.open('GET','https://ssum16cs.imad.hasura-app.io/counter', true);
     request.send(null);
