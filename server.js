@@ -97,12 +97,12 @@ app.get('/' , function (req , res) {
 app.get('/test-db', function(req,res){
     //make a request\
     //return the resposnse with results
-   pool.query('SELECT*FROM Test', function(err,result){
+   pool.query('SELECT * FROM Test', function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
        else{
-           res.send(JSON.stringify(result));
+           res.send(JSON.stringify(result.rows));
        }
    }); 
 });
@@ -127,7 +127,7 @@ app.get('/articles/:articleName', function (req, res) {
     //article == article-one
     //articles[articleName] == {} content object for article one
     var articleName = req.params.articleName;
-    pool.query("SELECT*FROM article WHERE tilte = " [req.params.articleName], function(err){
+    pool.query("SELECT*FROM article WHERE tilte = " [req.params.articleName], function(err,result){
         if(err){
            res.status(500).send(err.toString());
        }
